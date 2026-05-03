@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/salad_logo.png" type="image/png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Salad">
-    <meta property="og:description" content="Saladexp.xyz: A cheap, reliable executor.">
+    <meta property="og:description" content="Best Executor | Cheap | Fast | 24/7 Support">
     <meta property="og:url" content="https://www.saladexp.xyz/">
     <meta property="og:image" content="https://www.saladexp.xyz/assets/salad_logo.png?v=3">
     <meta property="og:image:width" content="512">
@@ -22,9 +22,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style id="obf_prehide">html{visibility:hidden;opacity:0;}</style>
-    <script src="index_style.js?v=50260502"></script>
-    <script>window.setTimeout(function(){if(!window.__obf_style_ready__){var prehide_node=document.getElementById("obf_prehide");if(prehide_node&&prehide_node.parentNode){prehide_node.parentNode.removeChild(prehide_node);}document.documentElement.style.visibility="visible";document.documentElement.style.opacity="1";}},4000);</script>
+    <style id="obf_prehide">html{background:#05070c;}body{visibility:hidden;opacity:0;}</style>
+    <script>
+        function rev() {
+            var p = document.getElementById('obf_prehide');
+            if (p) p.remove();
+            if (document.body) {
+                document.body.style.visibility = 'visible';
+                document.body.style.opacity = '1';
+            }
+        }
+    </script>
+   <script src="index_style.js?v=60260502" onload="rev()" onerror="rev()"></script>
+    <!-- <link rel="stylesheet" href="index_style.css" onload="rev()" onerror="rev()"> -->
     <style>
         h1 {
             margin-block: 0.67em;
@@ -32,7 +42,6 @@
         }
     </style>
 </head>
-
 <body>
     <div id="scroll_progress"></div>
     <div class="bg_wrapper">
@@ -601,6 +610,15 @@
                         </svg>
                         Dashboard
                     </button>
+                    <button class="dash_nav_btn" data-view="view_changelogs">
+                        <svg class="nav_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16v16H4z" />
+                            <path d="M8 8h8" />
+                            <path d="M8 12h8" />
+                            <path d="M8 16h5" />
+                        </svg>
+                        Changelogs
+                    </button>
                 </div>
                 <div class="dash_nav_section">
                     <span class="dash_nav_label">ACCOUNT</span>
@@ -666,6 +684,7 @@
                 <button class="dash_mobile_btn" id="dash_mobile_back">Back</button>
                 <select class="dash_mobile_select" id="dash_mobile_view">
                     <option value="view_overview">Dashboard</option>
+                    <option value="view_changelogs">Changelogs</option>
                     <option value="view_profile">Settings</option>
                     <option value="view_session">Session</option>
                     <option value="logout">Logout</option>
@@ -886,6 +905,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="dash_view_panel" id="view_changelogs" style="display:none;">
+                    <div class="overview_section">
+                        <div class="changelog_header">
+                            <h4 class="section_heading">Latest Changelogs</h4>
+                            <span class="changelog_meta" id="overview_changelog_updated">Live from /info</span>
+                        </div>
+                        <div class="changelog_list" id="overview_changelogs">
+                            <div class="changelog_empty">Loading changelogs...</div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="dash_view_panel" id="view_profile" style="display:none;">
                     <div class="settings_flat_grid">
@@ -1053,7 +1083,7 @@
             </div>
         </main>
     </div>
-    <script src="index_js.js?v=50260502"></script>
+    <script src="index_js.js?v=20260502"></script>
 </body>
 
 </html>
