@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Hello i'm leaving this deobfuscated because lol.  -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,20 +22,33 @@
     <meta name="twitter:image" content="https://www.saladexp.xyz/assets/salad_logo.png?v=3">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style id="obf_prehide">html{background:#05070c;}body{visibility:hidden;opacity:0;}</style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style id="obf_prehide">
+        html {
+            background: #05070c;
+        }
+
+        body {
+            visibility: hidden;
+            opacity: 0;
+        }
+    </style>
     <script>
-        function rev() {
-            var p = document.getElementById('obf_prehide');
+        window.rev = function () {
+            const p = document.getElementById('obf_prehide');
             if (p) p.remove();
             if (document.body) {
                 document.body.style.visibility = 'visible';
                 document.body.style.opacity = '1';
             }
-        }
+        };
     </script>
-   <script src="index_style.js?v=60260502" onload="rev()" onerror="rev()"></script>
-    <!-- <link rel="stylesheet" href="index_style.css" onload="rev()" onerror="rev()"> -->
+    <script src="index_style.js?v=70260502" onload="rev()" onerror="rev()"></script>
+    <!-- <link rel="stylesheet" href="index_style.css"
+        onload="typeof rev==='function'?rev():(document.getElementById('obf_prehide')?.remove(),document.body.style.visibility='visible',document.body.style.opacity='1')"
+        onerror="typeof rev==='function'?rev():(document.getElementById('obf_prehide')?.remove(),document.body.style.visibility='visible',document.body.style.opacity='1')"> -->
     <style>
         h1 {
             margin-block: 0.67em;
@@ -42,6 +56,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="scroll_progress"></div>
     <div class="bg_wrapper">
@@ -487,9 +502,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <footer class="footer_section">
@@ -516,7 +528,7 @@
                             </div>
                             <div class="link_group">
                                 <h4 class="group_title">Legal</h4>
-                                <a href="#" class="footer_link" id="link_tos">TOS</a>
+                                <a href="#" class="footer_link" id="link_tos_view">TOS</a>
                                 <a href="mailto:salad.legal@gmail.com" class="footer_link">salad.legal@gmail.com</a>
                             </div>
                         </div>
@@ -529,66 +541,80 @@
         </footer>
     </div>
 
-    <div id="tos_modal" class="legal_modal" style="display:none;">
-        <div class="legal_overlay"></div>
-        <div class="legal_container">
-            <div class="legal_header">
-                <h2>Terms and Conditions</h2>
-                <button id="close_tos" class="legal_close">&times;</button>
+    <div id="tos_view"
+        style="display:none; width:100%; min-height:100vh; background: linear-gradient(rgba(7, 8, 13, 0.95), rgba(7, 8, 13, 0.95)), url('assets/wb_background.png') center/cover fixed; color:#fff; padding:120px 20px 60px 20px;">
+        <div style="max-width:800px; margin:0 auto;">
+            <h1
+                style="font-size:3rem; margin-bottom:10px; font-weight:700; letter-spacing:-0.03em; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+                Terms and Conditions</h1>
+            <p
+                style="color:rgba(255,255,255,0.7); margin-bottom:50px; font-size:1.1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.5);">
+                saladexp.xyz Terms and Conditions</p>
+
+            <div
+                style="background:transparent; border:none; padding:20px 0; display:flex; flex-direction:column; gap:40px;">
+                <div>
+                    <h3 style="font-size:1.5rem; margin-bottom:16px; color:#fff;">1. Sales & Refunds</h3>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">All sales are final; no
+                        refunds will be issued unless explicitly approved by our support team.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">Before requesting a
+                        refund, you must contact support at <a href="https://discord.gg/Wh8BaFKZ3R" target="_blank"
+                            style="color:#fff; text-decoration:underline;">https://discord.gg/Wh8BaFKZ3R</a></p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">Refund requests made
+                        without prior support contact will be denied.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7;">Chargebacks or unauthorized disputes will
+                        result in a permanent ban from our store and potential legal action.</p>
+                </div>
+
+                <div>
+                    <h3 style="font-size:1.5rem; margin-bottom:16px; color:#fff;">2. Product Delivery & Responsibility
+                    </h3>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">Upon successful
+                        payment, you will receive your Salad Premium Key immediately.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7;">You are responsible for entering the
+                        correct details during checkout; we are not liable for incorrect deliveries due to user error.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="font-size:1.5rem; margin-bottom:16px; color:#fff;">3. Usage Restrictions</h3>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">Reselling or
+                        redistributing purchased keys is strictly prohibited.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">We are not responsible
+                        for any bans, suspensions, or other consequences resulting from misuse of our products.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7;">Our responsibility ends once the key is
+                        delivered and confirmed as working.</p>
+                </div>
+
+                <div>
+                    <h3 style="font-size:1.5rem; margin-bottom:16px; color:#fff;">4. Fraud & Enforcement</h3>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">Any fraudulent
+                        activity, including but not limited to chargebacks, multiple refund requests, or unauthorized
+                        reselling, will result in permanent suspension.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7;">We reserve the right to refuse service to
+                        anyone at our discretion.</p>
+                </div>
+
+                <div>
+                    <h3 style="font-size:1.5rem; margin-bottom:16px; color:#fff;">5. Terms Updates & Agreement</h3>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">We reserve the right to
+                        update or modify these Terms of Service at any time without prior notice.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:12px;">Your continued use of
+                        our services after changes implies acceptance of the updated terms.</p>
+                    <p style="color:rgba(255,255,255,0.8); line-height:1.7;">By making a purchase, you acknowledge and
+                        agree to these terms. If you do not agree, do not proceed with your purchase.</p>
+                </div>
             </div>
-            <div class="legal_body">
-                <h3>saladexp.xyz Terms and Conditions</h3>
-
-                <section>
-                    <h4>1. Sales & Refunds</h4>
-                    <p>All sales are final; no refunds will be issued unless explicitly approved by our support team.
-                    </p>
-                    <p>Before requesting a refund, you must contact support at <a href="https://discord.gg/Wh8BaFKZ3R"
-                            target="_blank">https://discord.gg/Wh8BaFKZ3R</a></p>
-                    <p>Refund requests made without prior support contact will be denied.</p>
-                    <p>Chargebacks or unauthorized disputes will result in a permanent ban from our store and potential
-                        legal action.</p>
-                </section>
-
-                <section>
-                    <h4>2. Product Delivery & Responsibility</h4>
-                    <p>Upon successful payment, you will receive your Salad Premium Key immediately.</p>
-                    <p>You are responsible for entering the correct details during checkout; we are not liable for
-                        incorrect deliveries due to user error.</p>
-                </section>
-
-                <section>
-                    <h4>3. Usage Restrictions</h4>
-                    <p>Reselling or redistributing purchased keys is strictly prohibited.</p>
-                    <p>We are not responsible for any bans, suspensions, or other consequences resulting from misuse of
-                        our products.</p>
-                    <p>Our responsibility ends once the key is delivered and confirmed as working.</p>
-                </section>
-
-                <section>
-                    <h4>4. Fraud & Enforcement</h4>
-                    <p>Any fraudulent activity, including but not limited to chargebacks, multiple refund requests, or
-                        unauthorized reselling, will result in permanent suspension.</p>
-                    <p>We reserve the right to refuse service to anyone at our discretion.</p>
-                </section>
-
-                <section>
-                    <h4>5. Terms Updates & Agreement</h4>
-                    <p>We reserve the right to update or modify these Terms of Service at any time without prior notice.
-                    </p>
-                    <p>Your continued use of our services after changes implies acceptance of the updated terms.</p>
-                    <p>By making a purchase, you acknowledge and agree to these terms. If you do not agree, do not
-                        proceed with your purchase.</p>
-                </section>
-
-                <footer class="legal_footer">
-                    <p>For any questions or support, contact us at <a href="https://discord.gg/Wh8BaFKZ3R"
-                            target="_blank">https://discord.gg/Wh8BaFKZ3R</a> or <a
-                            href="mailto:salad.legal@gmail.com">salad.legal@gmail.com</a></p>
-                </footer>
+            <div
+                style="margin-top:60px; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); text-align:center; color:rgba(255,255,255,0.7);">
+                <p>For any questions or support, contact us at <a href="https://discord.gg/Wh8BaFKZ3R" target="_blank"
+                        style="color:#fff; text-decoration:underline;">https://discord.gg/Wh8BaFKZ3R</a> or <a
+                        href="mailto:salad.legal@gmail.com"
+                        style="color:#fff; text-decoration:underline;">salad.legal@gmail.com</a></p>
             </div>
         </div>
     </div>
+
     <div id="dashboard_view" class="dashboard_view" style="display:none;">
         <aside class="dash_sidebar">
             <div class="dash_sidebar_top">
@@ -1083,7 +1109,7 @@
             </div>
         </main>
     </div>
-    <script src="index_js.js?v=60260502"></script>
+    <script src="index_js.js?v=70260502"></script>
 </body>
 
 </html>
